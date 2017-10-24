@@ -88,7 +88,7 @@ for freq in cipher_cols_freqs:
             shifted_char = char
             max_corr = corr
     keyword += shifted_char
-keyword_f = open('keyword1.txt', 'w')
+keyword_f = open('keyword.txt', 'w')
 keyword_f.write(keyword)
 keyword_f.close()
 
@@ -98,6 +98,6 @@ for idx, char in enumerate(cipher):
     char = chr((ord(char) - ord(keyword[idx % keyword_len]) + len(alpha)) % len(alpha) + ord('a'))
     plaintext.append(char)
 message = ''.join(plaintext)
-message_f = open('message1.txt', 'w')
+message_f = open('message.txt', 'w')
 message_f.write(message)
 message_f.close()
